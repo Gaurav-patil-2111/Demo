@@ -106,3 +106,20 @@ button{
     border: 3px solid #4A628A;
     border-radius: 16px;
 }
+
+
+@media (max-width: 1000px) {
+    .main-row{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    svg{
+        height: 300px;
+        width: 200px;
+    }
+    .img-div{
+        height: 300px;
+        width: 300px;
+    }
+}
