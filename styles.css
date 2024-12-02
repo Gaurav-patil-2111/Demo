@@ -122,4 +122,31 @@ button{
         height: 300px;
         width: 300px;
     }
+
+    h3{
+        
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-optical-sizing: auto;
+    font-size: 80px;
+    padding: 20px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-style: normal;
+    }
+
+    button{
+        background-color: #B9E5E8;
+        margin: 0%;
+        color: #4A628A;
+        font-family: "Edu AU VIC WA NT Pre", cursive;
+        font-optical-sizing: auto;
+        font-size: 50px;
+        padding: 10px;
+        font-weight: 100;
+        font-style: normal;
+        border: 3px solid #4A628A;
+        border-radius: 16px;
+        height: 150px;
+        padding: 40px;
+    }
 }
