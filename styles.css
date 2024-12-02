@@ -1,0 +1,108 @@
+html,body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container{
+    background-color: #DFF2EB;
+    align-items: center;
+    /* color: #4A628A; */
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-div{
+    display: flex;
+    padding: 20px;
+    gap: 100px;
+    margin: 0%;
+    align-items: center;
+}
+
+.row-div img{
+    height: 150px;
+    order: -1;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #B9E5E8;
+    align-items: center;
+    flex-grow: 1;
+align-items: center;
+    margin: 0;
+    padding: 0%;
+    /* height: 100%; */
+}
+
+h3{
+    margin: 0%;
+    color: #4A628A;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-optical-sizing: auto;
+    font-size: 40px;
+    padding: 20px;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.title{
+
+    font-size: 50px;
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+  font-weight: 750;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
+    color: #4A628A;
+
+}
+
+
+.main-row{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.text-box{
+    /* padding-top: 50px; */
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+
+.img-div{
+    height: 150px;
+    width:150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #4A628A;
+    border: 3px solid #4A628A;
+    border-radius: 16px;
+    /* background-color: rgba(0, 0, 0, 0.25);  */
+    /* background-color: #7AB2D3; */
+}
+
+button{
+    background-color: #B9E5E8;
+    margin: 0%;
+    color: #4A628A;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-optical-sizing: auto;
+    font-size: 30px;
+    padding: 10px;
+    font-weight: 100;
+    font-style: normal;
+    border: 3px solid #4A628A;
+    border-radius: 16px;
+}
