@@ -71,13 +71,13 @@ function getComputerChoice(){
 
 function getResult(humanChoice,computerChoice){
     if(humanChoice==1 && computerChoice==3){
-      win();  return "You Win !!"
+       return "You Win !!"
     }
     else if(humanChoice==2 && computerChoice==1){
-        win();  return "You Win !!"
+         return "You Win !!"
     }
     else if(humanChoice==3 && computerChoice==2){
-        win();  return "You Win !!"
+         return "You Win !!"
     }
     else if(humanChoice==computerChoice)
         return "DRAW !!"
