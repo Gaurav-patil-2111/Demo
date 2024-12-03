@@ -111,6 +111,29 @@ button{
 
 
 @media (max-width: 1000px) {
+
+    .title{
+
+        font-size: 80px;
+        font-family: "Doto", sans-serif;
+        font-optical-sizing: auto;
+      font-weight: 750;
+      font-style: normal;
+      font-variation-settings:
+        "ROND" 0;
+        color: #4A628A;
+    
+    }
+
+    .row-div{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        gap: 0px;
+        margin: 0%;
+        align-items: center;
+    }
+
     .main-row{
         display: flex;
         flex-direction: column;
