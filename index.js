@@ -1,23 +1,11 @@
-// document.querySelectorAll(".img-div").forEach(element=>{
-//     element.addEventListener("mouseenter",(event)=>{
-//         event.target.style.backgroundColor="rgba(0, 0, 0, 0.15)"
-//     })
-// })
-
 document.querySelectorAll(".img-div").forEach(element=>{
     element.addEventListener("click",(event)=>{
-        // event.currentTarget.style.backgroundColor="#4A628A"
-        // event.currentTarget.querySelector("svg").style.fill="#B9E5E8"
-        
+
+        console.log("Clicked : "+event.currentTarget.id)
         letsPlay(event.currentTarget.id)
     })
 })
 
-// document.querySelectorAll(".img-div").forEach(element=>{
-//     element.addEventListener("mouseleave",(event)=>{
-//         event.target.style.backgroundColor="#B9E5E8"
-//     })
-// })
 
 
 function letsPlay(no){
@@ -25,21 +13,28 @@ function letsPlay(no){
     console.log("comp choice: "+computerChoice)
     console.log("human choice: "+no)
     let humanChoice=no
-    
-    let list=document.querySelector(".main-row")
 
-    let humanelement=list.children[humanChoice-1].children[0]
-    let computerelement=list.children[computerChoice-1].children[0]
+    
+    let list=document.querySelector(".main-div")
+    let midElement=document.getElementById("mid-id")
+    midElement.remove()
+
+    let humanelement=list.children[humanChoice-1].children[0].cloneNode(true);
+    let computerelement=list.children[computerChoice-1].children[0].cloneNode(true);
     
     let humanBox=document.createElement("div")
     let computerBox=document.createElement("div")
 
+    humanBox.className="element-div"
+    computerBox.className="element-div"
+
     let humanText=document.createElement("h1")
     let computerText=document.createElement("h1")
 
-    humanText.innerText="YOUR CHOICE :"
-    computerText.innerText="COMPUTER CHOICE :"
-
+    humanText.innerText="Your choice :"
+    computerText.innerText="Computer choice :"
+    humanBox.classList.add("non-clickable");
+    computerBox.classList.add("non-clickable");
     humanBox.appendChild(humanText)
     humanBox.append(humanelement)
 
@@ -48,26 +43,15 @@ function letsPlay(no){
    
     // humanelement.appendChild(text)
     // list.removeChild(list.firstChild)
-    list.removeChild(list.children[0]);
-    list.removeChild(list.children[0]);
-    list.removeChild(list.children[0]);
+    // list.removeChild(list.children[0]);
+    // list.removeChild(list.children[0]);
+    // list.removeChild(list.children[0]);
     list.innerHTML = '';
-    // list.appendChild(humanelement.cloneNode(true))
-    // list.appendChild(computerelement.cloneNode(true))
-    list.appendChild(humanBox.cloneNode(true))
-    list.appendChild(computerBox.cloneNode(true))
-    console.log("removed ")
 
-    let main_text=document.querySelector(".main-text")
-    let text2=main_text.cloneNode(true)
-
-    main_text.textContent="Your Choice :"
-    text2.textContent="Computer choice :"
-    let textbox=document.querySelector(".text-box")
-    // textbox.style.width="50%"
-
-    textbox.appendChild(text2)
-    let text3=main_text.cloneNode(true)
+    list.appendChild(humanBox)
+    list.appendChild(computerBox)
+    
+    let text3=document.createElement("h1")
     text3.innerHTML=getResult(humanChoice,computerChoice)
     document.querySelector(".main-container").appendChild(text3)
 
@@ -99,6 +83,3 @@ function getResult(humanChoice,computerChoice){
         return "DRAW !!"
     else return "You Lost !!"
 }
-
-
-
