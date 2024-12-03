@@ -69,7 +69,9 @@ h3{
 .main-row{
     display: flex;
     flex-direction: row;
+    width: 60vw;
     gap: 50px;
+    justify-content: center;
 }
 
 .text-box{
@@ -113,6 +115,8 @@ button{
         display: flex;
         flex-direction: column;
         gap: 50px;
+        justify-content: center;
+        align-items: center;
     }
     svg{
         height: 300px;
