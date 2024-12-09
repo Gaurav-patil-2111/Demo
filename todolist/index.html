@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <button id="add-task">Add Task</button>
+    <div class="dialog overlay" id="dialog">
+        <div id="inner-div">
+            <form onsubmit="addTask(this); return false;">
+                <h3>Add Task :</h3>
+                <input type="text"  id="input-text" name="title" placeholder="Title">
+                <label for="priority">Priority :</label>
+
+                    <select name="priority" id="priority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low" selected>Low</option>
+                    </select>
+
+                <button id="add-task-btn" type="submit">Add Task</button>
+                <button id="close">Close </button>
+            </form>
+            
+        </div>
+    </div>
+    <h3>To do :</h3>
+    <button id="filterbtn" onclick="filter()">Filter</button>
+    <select name="filter" id="filter"> 
+        <option value="none">None</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low" selected>Low</option>
+        </select>
+       
+    <ul id="task-list"></ul>
+
+    <h3>Completed :</h3>
+    <ul id="completed-list"></ul>
+    
+    <script src="./script.js"></script>
+    
+</body>
+</html>
